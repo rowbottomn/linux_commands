@@ -60,7 +60,7 @@ Now you need to install a firewall, enable it, and configure it only to allow ne
 
 You can install UFW with:
 
-`$ sudo apt install ufw`
+`$ sudo apt install ufw`  
 By default, UFW denies all incoming connections and allows all outgoing connections. This means any application on your server can reach the internet, but anything trying to reach your server cannot connect.
 
 First, make sure you can log in by enabling access to SSH, HTTP, and HTTPS:
@@ -75,7 +75,7 @@ Then enable UFW:
 
 You can see what services are allowed and denied with:
 
-`$ sudo ufw status`
+`$ sudo ufw status`  
 If you ever want to disable UFW, you can do so by typing:
 
 `$ sudo ufw disable`  
