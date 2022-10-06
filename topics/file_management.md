@@ -50,9 +50,9 @@ Pattern |Matches
 
 ## mkdir – Create Directories
 The `mkdir` command is used to create directories. It works like this:  
-`mkdir directory...`
+`mkdir directory ...`
 
-    *A note on notation: When three periods follow an argument in the description of a command (as above), it means that the argument can be repeated, thus the following command: `mkdir dir1` would create a single directory named dir1, while the following: `mkdir dir1 dir2 dir3` would create three directories named dir1, dir2, and dir3.*
+    A note on notation: When three periods follow an argument in the description of a command (as above), it means that the argument can be repeated, thus the following command: `mkdir dir1` would create a single directory named dir1, while the following: `mkdir dir1 dir2 dir3` would create three directories named dir1, dir2, and dir3.
 ## cp – Copy Files and Directories
 The cp command copies files or directories. It can be used two different ways. The following:  
 `cp item1 item2`  
@@ -73,14 +73,11 @@ Option |Long Option |Meaning
 Command | Results  
 ---|---
 `cp file1 file2`| Copy file1 to file2. If file2 exists, it is overwritten with the contents of file1. If file2 does not exist, it is created.
-`cp -i file1 file2`| Same as previous command, except that if file2
-exists, the user is prompted before it is overwritten.
+`cp -i file1 file2`| Same as previous command, except that if file2 exists, the user is prompted before it is overwritten.
 `cp file1 file2 dir1`| Copy file1 and file2 into directory dir1. The directory dir1 must already exist.
 `cp dir1/* dir2`| Using a wildcard, copy all the files in dir1 into
 dir2. The directory dir2 must already exist.
-`cp -r dir1 dir2`| Copy the contents of directory dir1 to directory
-dir2. If directory dir2 does not exist, it is created and, after the copy, will contain the same contents as directory dir1.
-If directory dir2 does exist, then directory dir1 (and its contents) will be copied into dir2.
+`cp -r dir1 dir2`| Copy the contents of directory dir1 to directory dir2. If directory dir2 does not exist, it is created and, after the copy, will contain the same contents as directory dir1.  If directory dir2 does exist, then directory dir1 (and its contents) will be copied into dir2.
 ## mv – Move and Rename Files
 The mv command performs both file moving and file renaming, depending on how it is used. In either case, the original filename no longer exists after the operation. mv is used in much the same way as cp, as shown here:   
 `mv item1 item2`   
@@ -121,7 +118,7 @@ Command |Results
 `rm -i`| file1 Same as the previous command, except that the user is prompted for confirmation before the deletion is performed.
 `rm -r file1 dir1`| Delete file1 and dir1 and its contents.
 `rm -rf file1 dir1`| Same as the previous command, except that if either file1 or dir1 do not exist, rm will continue silently.  
-    ** Be Careful with rm!**  
+    **Be Careful with rm!**  
 Unix-like operating systems such as Linux do not have an undelete command.  Once you delete something with rm, it's gone. Linux  assumes you're smart and you know what you're doing.
 Be particularly careful with wildcards. Consider this classic example. Let's say you want to delete just the HTML files in a directory. To do this, you type the following:   
 `rm *.html`  
@@ -156,7 +153,7 @@ Since we are going to do some real file manipulation, let's build a safe place t
 1. First we need a directory to work in. Create one in our home directory and call it playground.
 ### Creating Directories
 The mkdir command is used to create a directory. To create our playground directory we will first make sure we are in our home directory and will then create the new directory.  
-`[me@linuxbox ~]$ cd`  
+`[me@linuxbox ~]$ cd ~`    
 `[me@linuxbox ~]$ mkdir playground`  
 To make our playground a little more interesting, let's create a couple of directories inside it called dir1 and dir2. To do this, we will change our current working directory to playground and execute another mkdir.
 `[me@linuxbox ~]$ cd playground`  
@@ -178,7 +175,8 @@ The cp command performed the copy again, but this time displayed a concise messa
 To get a warning, we'll include the “-i” (interactive) option.  
 `[me@linuxbox playground]$ cp -i /etc/passwd .`  
 ```cp: overwrite `./passwd'?```  
-Responding to the prompt by entering a y will cause the file to be overwritten, any other character (for example, n) will cause cp to leave the file alone.  
+Responding to the prompt by entering a y will cause the file to be overwritten, any other character (for example, n) will cause cp to leave the file alone. 
+`cp /etc/os-release/` 
 ### Moving and Renaming Files
 Now, the name passwd doesn't seem very playful and this is a playground, so let's change it to something else.
 `[me@linuxbox playground]$ mv passwd fun`
