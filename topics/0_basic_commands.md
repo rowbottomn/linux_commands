@@ -16,6 +16,5 @@ Command| Description | Example
 `mkdir dir_name` | Makes a new directory with the given name in the present directory.| []()
 `rmdir dir_name ` | Removes a directory (if it is empty).| []()
 `rmdir dir_name -R` | Removes a directory recursively.| []()
-
 `cd ..` | Moves up a directory| []()
 `cd ` | Moves up a directory| []()
